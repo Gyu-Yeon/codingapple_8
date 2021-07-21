@@ -1,0 +1,63 @@
+<script>
+
+class GrandFather {
+    constructor(name){
+        this.lastName = "Kim";
+        this.firstName = name;
+    }
+    sayHi(){
+        console.log('Hi');
+    }
+}
+
+let grandFater1 = new GrandFather('yuzin')
+
+class Father extends GrandFather{
+    constructor(name){
+        super(name);
+        //super() = 물려받는 class의 constructor라는 뜻 
+    //    super()= constructor(name){
+    //    this.lastName = "Kim";
+    //    this.firstName = name;
+    //      }
+        this.age = 50;
+
+    }
+}
+
+let father1 =new Father('Mansu');
+
+
+
+// let person = {
+//     name : 'Park',
+//     age: 30,
+//     get nextAge(){
+//         return this.age+1
+//     },
+//     // get 함수들(getter) 는 return이 있어야한다.
+//     set setAge(age){
+//         this.age = parseInt(age);
+//     }
+//     // set 함수들(setter)는 파라미터가 1개 있어야 합니다.
+// }
+
+// person.setAge = '20';
+// person.nextAge
+
+class Person {
+    constructor(){
+        this.name = 'Park';
+        this.age = 20;
+    }
+    get nextAge(){
+        return this.age + 1
+    }
+    set setAge(age){
+        this.age = age;
+    }
+}
+
+let person1 = new Person();
+
+</script>
